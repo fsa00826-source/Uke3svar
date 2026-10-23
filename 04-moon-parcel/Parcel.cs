@@ -6,6 +6,9 @@ public class Parcel
 
     public Parcel(string trackingCode, string destination, int weight)
     {
+        TrackingCode = trackingCode;
+        Destination = destination;
+        Weight = weight;
         // TODO: Sett properties fra parameterne.
     }
 }

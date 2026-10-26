@@ -4,10 +4,15 @@ List<Artifact> artifacts = new List<Artifact>()
     new Artifact("Olav", "Sweden", -44),
     new Artifact("Donald Trump", "Oslo", 12521),
 };
+Console.WriteLine("Antall: " {artifacts.Count});
+
+foreach (var artifact in artifacts)
+{
+    Console.WriteLine(artifact);
+}
+
+artifacts.Add(new Artifact("AAA", "Underground base", 50));
 Console.WriteLine(artifacts.Count);
-
-new Artifact("AAA", "Underground base", 50);
-
 
 // TODO: Opprett minst fire Artifact-objekter og legg dem i listen.
 // TODO: Skriv Count og alle objektene.

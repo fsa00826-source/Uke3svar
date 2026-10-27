@@ -14,5 +14,6 @@ third.Name = "Tobias";
 third.Species = "Regular God";
 third.Energy = 9000;
 
-// TODO: Sett properties til ulike verdier.
-// TODO: Skriv verdiene for alle tre objektene.
+Console.WriteLine($"{first.Name} | {first.Species} | Energy: {first.Energy}");
+Console.WriteLine($"{second.Name} | {second.Species} | Energy: {second.Energy}");
+Console.WriteLine($"{third.Name} | {third.Species} | Energy: {third.Energy}");

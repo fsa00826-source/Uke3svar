@@ -5,7 +5,6 @@ class Program
         PrintTransmission("System ready");
         PrintTransmission("Dock", "Gate unlocked");
         PrintTransmission("Hei", "hei2", 5900);
-        // TODO: Kall også din tredje overload.
     }
 
     static void PrintTransmission(string message)
@@ -23,5 +22,4 @@ class Program
         Console.WriteLine($"[{sender}] {message} {explosive}");
     }
 
-    // TODO: Lag tredje overload.
 }

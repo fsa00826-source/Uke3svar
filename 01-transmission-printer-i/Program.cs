@@ -9,11 +9,10 @@ class Program
     static void PrintTransmission(string message)
     {
         Console.WriteLine($"[UNKNOWN] {message}");
-        // TODO
     }
 
     static void PrintTransmission(string sender, string message)
     {
-        Console.WriteLine($"{sender} {message}"); // TODO
+        Console.WriteLine($"{sender} {message}");
     }
 }

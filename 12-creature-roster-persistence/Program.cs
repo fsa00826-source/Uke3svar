@@ -1,3 +1,5 @@
+using System.IO;
+
 string path = "creatures.txt";
 
 List<Creature> creatures = new List<Creature>
@@ -7,7 +9,33 @@ List<Creature> creatures = new List<Creature>
     new Creature("Senn", "Cloud Moth", 41)
 };
 
-// TODO: Konverter objektene til linjer og skriv dem til fil.
-// TODO: Les filen.
-// TODO: Rekonstruer gyldige Creature-objekter i en ny liste.
-// TODO: Skriv resultatet.
+List<string> linjer = new List<string>();
+foreach (Creature c in creatures)
+{
+    linjer.Add(c.TilFilLinje());
+}
+File.WriteAllLines(path, linjer);
+
+string[] lines = File.ReadAllLines(path);
+
+List<Creature> loaded = new List<Creature>();
+
+foreach (string line in lines)
+{
+    string[] parts = line.Split('|');
+
+    if (parts.Length != 3)
+    {
+        continue;
+    }
+    if (!int.TryParse(parts[2], out int energy))
+    {
+        continue;
+    }
+    loaded.Add(new Creature(parts[0], parts[1], energy));
+}
+foreach(Creature c in loaded)
+{
+    Console.WriteLine($"{c.Name} | {c.Species} | {c.Energy}");
+}
+

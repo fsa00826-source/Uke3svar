@@ -9,6 +9,5 @@ public class Parcel
         TrackingCode = trackingCode;
         Destination = destination;
         Weight = weight;
-        // TODO: Sett properties fra parameterne.
     }
 }

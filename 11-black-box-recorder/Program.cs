@@ -1,4 +1,12 @@
+using System.IO;
+
 string path = "blackbox.txt";
 
-// TODO: Hvis filen ikke finnes, skriv eksempeldata.
-// TODO: Les så alle linjene og skriv dem ut.
+if (!File.Exists(path))
+{
+    File.WriteAllLines(path, new[] { "Southlunar40, sit tight!", "Descend in O X 4 seconds. ", "Put on your helmet A$AP!" });
+}
+foreach (var line in File.ReadAllLines(path))
+{
+    Console.WriteLine(line);
+}

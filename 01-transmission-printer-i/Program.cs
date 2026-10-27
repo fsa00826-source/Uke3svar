@@ -13,6 +13,6 @@ class Program
 
     static void PrintTransmission(string sender, string message)
     {
-        Console.WriteLine($"{sender} {message}");
+        Console.WriteLine($"[{sender}] {message}");
     }
 }

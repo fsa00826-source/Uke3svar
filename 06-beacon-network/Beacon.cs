@@ -13,7 +13,5 @@ public class Beacon
         Frequency = frequency;
 
         CreatedCount++;
-
-        // TODO: Oppdater CreatedCount.
     }
 }
